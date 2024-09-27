@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <style>
+        body{
+            width: auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: change 40s infinite ease-in-out;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100%;
+        }
+        @keyframes change{
+            0%{
+                background-image: url(home1.jpg);
+            }
+            20%{
+                background-image: url(home2.jpg);
+            }
+            40%{
+                background-image: url(home8.jpg);
+            }
+            60%{
+                background-image: url(home7.jpg);
+            }
+            80%{
+                background-image: url(home5.jpg);
+            }
+            100%{
+                background-image: url(home6.jpg);
+            }
+        }
+        .main{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .navbar{
+            height: 50px;
+            margin: auto;
+        }
+        .menu{
+            float:right;
+            margin-right: 15px;
+        }
+        .logo{
+            font-family: monospace;
+            color: white;
+            text-shadow: 0 0 10px white;
+            font-size: 40px;
+            margin-bottom: 0;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: monospace;
+            font-size: 20px;
+        }
+        li{
+            float: left;
+        }
+        li a{
+            color: white;
+            padding: 8px;
+            background-color: transparent;
+        }
+        li a:hover{
+            color: #66f5f1;
+            text-shadow: 0 0 10px #66f5f1;
+        }
+        .marquee{
+            color: white;
+            font-family: monospace;
+        }
+        .hr-line{
+            position: relative;
+            text-align: center;
+        }
+        .hr-line:before{
+            content:"";
+            height: 2px;
+            width: 7%;
+            background: #66f5f1;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            box-shadow: 0 0 10px #66f5f1;
+        }
+        .hr-line:after{
+            content:"";
+            height: 2px;
+            width: 77%;
+            background: #66f5f1;
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            box-shadow: 0 0 10px #66f5f1;
+        }
+        p.hr-info{
+            font-family: monospace;
+            color: white;
+            text-shadow: 0 0 10px white;
+
+        }
+        section{
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            gap: 1rem;
+            margin-left: 8%;
+        }
+        .hr-d{
+            width: 500px;
+            border: 1px solid;
+            padding: 10px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.4;
+        }
+        .hr{
+            margin-top: 120px;
+        }
+        pre{
+            margin: 4px;
+        }
+        h3{
+            margin-bottom: 4px;
+            font-family: monospace;
+            font-size: 20px;
+        }
+        .score1{
+            color: white;
+            margin-top: 5px;
+            border-radius: 25px;
+            border: 2px solid #66f5f1;
+            padding: 20px; 
+        }
+        .cric-scr{
+            outline-style: solid;
+            outline-color: white;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+        .s1{
+            align-items: top;
+            outline-style: solid;
+            outline-color: white;
+            width: 180px;
+            font-size: 10px;
+            font-family: monospace;
+            backdrop-filter: blur(5px);
+            display: inline-block;
+        }
+        .score2{
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            border: 2px solid #66f5f1;
+            padding: 20px; 
+        }
+        .ff-src{
+            outline-style: solid;
+            outline-color: white;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            width: 100%;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+        }
+        .s2{
+            align-items: top;
+            outline-style: solid;
+            outline-color: white;
+            width: 130px;
+            font-size: 10px;
+            font-family: monospace;
+            backdrop-filter: blur(5px);
+            display: inline-block;
+            
+        }
+        .f2{
+            color: white;
+            text-align: center;
+            font-family: monospace;
+            font-size: 40px;
+        }
+        .form{
+            text-align: center;
+        }
+        h2{
+            color: white;
+            font-family: monospace;
+            font-size: 30px;
+        }
+        h5{
+            color: red;
+            text-align: center;
+            font-size: 30px;
+        }
+        .dis{
+            color: red;
+            text-align: center;
+            font-size: 22px;
+        }
+        .fantacy{
+            border: 2px solid #66f5f1;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h1 class="logo">SPORTS<br>BUZZ</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="sports.html" target="_blank">SPORTS</a></li>
+                    <li><a href="news.html" target="_blank">NEWS</a></li>
+                    <li><a href="highlights.html" target="_blank">HIGHLIGHTS</a></li>
+                    <li><a href="fitness.html" target="_blank">FITNESS</a></li>
+                    <li><a href="about.html" target="_blank">ABOUT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="hr">
+            <h2 class="hr-line">
+                <section>
+                    <div hr-d>
+                        <p class="hr-info">Sports</p>
+                    </div>
+                </section>
+            </h2>
+        </div>
+        <div class="marquee">
+            <marquee behaviour="alternate">NEWS:"I will call my home and then sleep" - Shivam Mavi on his magnificent international debut against Sri Lanka in 1st T20I... <a href="news.html" target="_blank" style="color: white;">read more.</a></marquee>
+        </div>
+        <div class="score1">
+            <h3>Cricket</h3>
+            <a href="highlights.html" target="_blank" style="color: white;">
+            <div class="cric-scr">
+                <div class="s1">
+                    <pre>TEST 1 of 2</pre>
+                    <pre>End of day 4</pre>
+                    <pre> PAKISTAN       438 & 77/2 (31)</pre>
+                    <pre>NEW ZEALAND              612/9d</pre>
+                    <pre>PAK trial by 97 runs</pre>
+                </div>
+                <div class="s1">
+                    <pre>TEST 2 of 3(AUS lead 2-0)</pre>
+                    <pre>Day 4.Session 2</pre>
+                    <pre>SOUTH AFRICA          189 & 204</pre>
+                    <pre>AUSTRALIA                575/8d</pre>
+                    <pre>AUS won by innings and 182 runs</pre>
+                </div>
+                <div class="s1">
+                    <pre>TEST 2 of 2(IND wins 2-0)</pre>
+                    <pre>Day 4.Session 1</pre>
+                    <pre>BANGLADESH            227 & 231</pre>
+                    <pre>INDIA               314 & 145/7</pre>
+                    <pre>IND won by 3 wickets</pre>
+                </div>
+                <div class="s1">
+                    <pre>Test 3 of 3(ENG wins 3-0)</pre>
+                    <pre>Day 4.Session 1</pre>
+                    <pre>PAKISTAN              304 & 216</pre>
+                    <pre>ENGLAND             354 & 170/2</pre>
+                    <pre>ENG won by 8 wickets</pre>
+                </div>
+                <div class="s1">
+                    <pre>Test 1 of 2(IND leads 1-0)</pre>
+                    <pre>Day 5.Session 1 </pre>
+                    <pre>INDIA              404 & 258/2d</pre>
+                    <pre>BANGLADESH            150 & 324</pre>
+                    <pre>IND won by 188 runs</pre>
+                </div>
+                <div class="s1">
+                    <pre>Test 1 of 3(AUS leads 1-0)</pre>
+                    <pre>Day 2.Session 3</pre>
+                    <pre>SOUTH AFRICA           152 & 99</pre>
+                    <pre>AUSTRALIA            218 & 35/4</pre>
+                    <pre>AUS won by 6 wickets</pre>
+                </div>
+                <div class="s1">
+                    <pre>Test 2 of 2(AUS wins 2-0)</pre>
+                    <pre>Day 4.Session 1</pre>
+                    <pre>AUSTRALIA       511/7d & 199/6d</pre>
+                    <pre>WEST INDIES            214 & 77</pre>
+                    <pre>AUS won by 419 runs</pre>
+                </div>
+                <div class="s1">
+                    <pre>ODI 3 of 3(BAN wins 2-1)</pre>
+                    <pre></pre><br>
+                    <pre>INDIA                 409/8 (50)</pre>
+                    <pre>BANGLADESH              182 (34)</pre>
+                    <pre>IND won by 227 runs</pre>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="score2">
+            <h3>Foot Ball</h3>
+            <div class="ff-src">
+                <div class="s2">
+                    <pre>Final</pre>
+                    <pre></pre><br>
+                    <pre>ARGENTINA        3 (4)</pre>
+                    <pre>FRANCE           3 (2)</pre>
+                    <pre></pre><br>
+                </div>
+                <div class="s2">
+                    <pre>Third place play-off</pre>
+                    <pre></pre><br>
+                    <pre>CROATIA              2</pre>
+                    <pre>MOROCCO              1</pre>
+                    <pre></pre><br>
+                </div>
+                <div class="s2">
+                    <pre>Semi-finals</pre>
+                    <pre></pre><br>
+                    <pre>FRANCE               2</pre>
+                    <pre>MOROCCO              0</pre>
+                    <pre></pre><br>
+                </div>
+                <div class="s2">
+                    <pre>Semi-finals</pre>
+                    <pre></pre><br>
+                    <pre>ARGENTINA            3</pre>
+                    <pre>CROATIA              0</pre>
+                    <pre></pre><br>
+                </div>
+                <div class="s2">
+                    <pre>Quarter-finals</pre>
+                    <pre></pre><br>
+                    <pre>ENGLAND              1</pre>
+                    <pre>FRANCE               2</pre>
+                    <pre></pre><br> 
+                </div>
+                <div class="s2">
+                    <pre>Quarter-finals</pre>
+                    <pre></pre><br>
+                    <pre>MOROCCO              1</pre>
+                    <pre>PORTUGAL             0</pre>
+                    <pre></pre><br>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="fantacy">
+            <h1 class="f2">
+                Sports & Fantacy
+            </h1>
+            <h5>DISCLAIMER</h5>
+            <p class="dis">
+                Sports and fantacy is just to check your intrest in the particular sport,<br>Please consider it as fun and be in limits, as addiction may lead to loseing of money.
+            </p>
+            <div class="form">
+                <h2>
+                    Cricket
+                </h2>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTdE0Nuid3wqSKExL93zcIYnkNQqkKJwH79o0gnkNnpD-HhQ/viewform?embedded=true" width="640" height="1800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>
